@@ -1,5 +1,5 @@
 # --------------------
-# Capture화
+# capsulizing
 # inheritance
 # ---------------------
 
@@ -9,6 +9,9 @@ class SimpleStack:
 	implements for packaging
 	"""
 	def __init__(self):
+		self.a = 1
+		self._b = 2
+		self.__c = 3
 		self.__numbers = []
 
 	def push(self, num):
@@ -22,10 +25,13 @@ class SimpleStack:
 		return self.__numbers.pop(length - 1)
 
 
-# main code for packaging
+# main code for capsulizing
+# private : class 만 사용
+# public : 모두 사용
+# protected : 상속 받은 class까지 사용
 
 stack = SimpleStack()
-# stack.__numbers.clear()  # access to private member
+stack.__numbers.clear()  # access to private member
 
 # Quiz 1. stack 을 이용한 문자열 reverse 구현
 # "hello world" -> "dlrow olleh" 로 출력
