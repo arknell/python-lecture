@@ -33,6 +33,19 @@ class SimpleStack:
 stack = SimpleStack()
 stack.__numbers.clear()  # access to private member
 
+# 변수 선언
+word = "hello world"
+
+# 문자 접근
+for char in word:
+  stack.push(char)
+
+newWord = ""
+# 새 문자 생성
+for char in word:
+  newWord += stack.pop()
+
+print(newWord)
 # Quiz 1. stack 을 이용한 문자열 reverse 구현
 # "hello world" -> "dlrow olleh" 로 출력
 # Quiz 1-2. number 맴버를 public으로 교체
